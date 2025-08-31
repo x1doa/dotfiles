@@ -1,0 +1,7 @@
+@import "colors.rasi"
+@import "window.rasi"
+
+configuration {
+    font: "Noto Sans 12";
+    show-icons: true;
+}

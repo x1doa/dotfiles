@@ -1,0 +1,11 @@
+# Input Method
+GTK_IM_MODULE=xim
+XMODIFIERS=@im=ibus
+QT_IM_MODULE=ibus
+XIM_PROGRAM=/usr/bin/ibus-daemon
+QT4_IM_MODULE=ibus
+CLUTTER_IM_MODULE=ibus
+GLFW_IM_MODULE=ibus
+
+# QT Platform Theme
+QT_QPA_PLATFORMTHEME=qt6ct

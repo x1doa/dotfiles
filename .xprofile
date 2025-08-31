@@ -1,0 +1,31 @@
+# more info on http://joewing.net/projects/jwm/config-2.3.html
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+export XIM_PROGRAM=/usr/bin/ibus-daemon
+
+#export GTK_IM_MODULE=fcitx5
+#export QT_IM_MODULE=fcitx5
+#export XMODIFIERS="@im=fcitx5"
+
+# /usr/bin/xset -dpms &
+# /usr/bin/xset s off &
+xrdb -merge .Xresources
+
+# Xinput and others
+xinput set-prop 9 "libinput Middle Emulation Enabled" 1
+xmodmap -e 'add mod3 = Scroll_Lock'
+xset r on
+xset b off
+xset r rate 250 25
+
+# Touchpad Settings
+synclient \
+VertEdgeScroll=0 HorizEdgeScroll=0 \
+VertTwoFingerScroll=1 HorizTwoFingerScroll=1 \
+VertScrollDelta=40 HorizScrollDelta=40 \
+MinSpeed=0.2 MaxSpeed=1.4 \
+AccelFactor=0.2 CoastingSpeed=10 \
+TapButton1=1 TapButton2=0 TapButton3=0
+xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
+

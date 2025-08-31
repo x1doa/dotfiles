@@ -30,9 +30,6 @@ The default modkey is set to the "Super" key (aka the "Windows" key)
 | `MODKEY + Minus` | show the next scratchpad window or hide the focus scratchpad window |
 | `MODKEY + SHIFT + Minus` | move the current focused window to scratchpad |
 
-# Wallpaper
-
-The wallpaper is **NOT** made by me!, it was taken from [Wallhaven](https://wallhaven.cc), [Imgur](https://imgur.com/a/200-pieces-of-favourite-wallpapers-0SAg3zv) and [Derek Taylor's wallpaper repository](https://gitlab.com/dwt1/wallpapers)
 
 # Status bar
 

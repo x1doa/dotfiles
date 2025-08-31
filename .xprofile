@@ -20,10 +20,5 @@ xset b off
 xset r rate 250 25
 
 # Touchpad Settings
-synclient \
-VertEdgeScroll=0 HorizEdgeScroll=0 \
-VertTwoFingerScroll=1 HorizTwoFingerScroll=1 \
-VertScrollDelta=40 HorizScrollDelta=40 \
-MinSpeed=0.2 MaxSpeed=1 \
-AccelFactor=0.2 CoastingSpeed=10 \
-TapButton1=1 TapButton2=0 TapButton3=0
+xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
+xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Accel Speed" 0.7

@@ -12,7 +12,7 @@ order += "volume master"
 order += "battery 1"
 order += "time"
 
-
+# eth0 was used in the non-systemd distribution, replace it with eno1 if using systemd init distribution
 ethernet eth0 {
 	format_up = "<span foreground='#4caf50'> 󰈁  </span><span foreground='#f0f0f0'> Connected </span>"
 	format_down = "<span foreground='#e46c6d'>󰈂  </span><span foreground='#f0f0f0'> Disconnected </span>"
@@ -25,7 +25,7 @@ wireless wlan0 {
 
 cpu_temperature 0 {
 	format = "<span foreground='#e46c6d'>󰔏  </span><span foreground='#f0f0f0'> %degrees°C </span>"
-	path = "/sys/class/thermal/thermal_zone1/temp"
+	path = "/sys/class/thermal/thermal_zone0/temp"
 }
 
 volume master {
@@ -36,15 +36,17 @@ volume master {
 	mixer_idx = 0
 }
 
+# command 'ls /sys/class/power_supply/' to find batteries
+# replace BAT1 with BAT(any battery numbers)
 battery 1 {
 	last_full_capacity = true
 	format = "<span foreground='#4caf50'>%status </span><span foreground='#f0f0f0'> %percentage </span>"
-	format_down = "<span foreground='#e46c6d'>%status </span><span foreground='#f0f0f0'> No Battery </span>"
+	format_down = "<span foreground='#e46c6d'>󰂃 </span><span foreground='#f0f0f0'> No Battery </span>"
 	status_chr = "󰂄"
 	status_bat = "󰂂"
 	status_unk = "󰂃"
 	status_full = "󰁹"
-	path = "/sys/class/power_supply/BAT%d/uevent"
+	path = "/sys/class/power_supply/BAT1/uevent"
 	low_threshold = 10
 	integer_battery_capacity = true
 }

@@ -4,9 +4,9 @@ window {
   background-color: @background-color;
   padding: 15px;
   border: 0px;
-  location: southwest;
-  x-offset: 5px;
-  y-offset: -45px;
+  location: northwest;
+  x-offset: 7px;
+  y-offset: 50px;
 }
 
 mainbox {

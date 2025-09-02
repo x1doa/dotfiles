@@ -29,7 +29,7 @@ white = "#9f9f9f"
 yellow = "#fbc02d"
 
 [colors.primary]
-background = "#000000"
+background = "#0f0f0f"
 foreground = "#fafafa"
 
 [colors.selection]
